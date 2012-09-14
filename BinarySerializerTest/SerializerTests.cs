@@ -77,6 +77,28 @@ namespace BinarySerializerTest
             Assert.AreEqual(dictionary.Count, dictionaryResult.Count);
         }
 
+        [TestMethod]
+        public void DeserializingNullOnlyWorksForReferenceTypes()
+        {
+            String isNull = null;
+            Assert.AreEqual(isNull, SerializeDeserialize<string>(isNull));
+
+            try
+            {
+                using (var stream = new MemoryStream())
+                {
+                    new BinarySerializationWriter(stream).WriteObject(null);
+                    stream.Position = 0;
+                    new BinarySerializationReader(stream).ReadObject<int>();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(InvalidOperationException));
+            }
+        }
+
         private object SerializeDeserializeObject(object o)
         {
             return SerializeDeserialize<object>(o);
