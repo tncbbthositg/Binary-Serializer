@@ -1,0 +1,7 @@
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializerTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializerTest\bin\Debug\BinarySerializerTest.dll
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializerTest\bin\Debug\BinarySerializerTest.pdb
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializerTest\bin\Debug\com.AutopilotLlc.BinarySerializer.dll
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializerTest\bin\Debug\com.AutopilotLlc.BinarySerializer.pdb
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializerTest\obj\Debug\BinarySerializerTest.dll
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializerTest\obj\Debug\BinarySerializerTest.pdb

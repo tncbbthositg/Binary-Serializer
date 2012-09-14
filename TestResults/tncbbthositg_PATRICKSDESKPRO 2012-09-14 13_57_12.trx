@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="81760c6c-0509-46a3-8e3b-85b7900c017c" name="tncbbthositg@PATRICKSDESKPRO 2012-09-14 13:57:12" runUser="PatricksDeskPro\tncbbthositg" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="970cc930-00b7-41ec-8f95-5c45e87bb25d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="tncbbthositg_PATRICKSDESKPRO 2012-09-14 13_57_12">
+      <DeploymentItem filename="C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializer\bin\Debug\com.AutopilotLlc.BinarySerializer.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-09-14T13:57:12.1300168-04:00" queuing="2012-09-14T13:57:12.5980257-04:00" start="2012-09-14T13:57:12.7180259-04:00" finish="2012-09-14T13:57:13.4580422-04:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CanSerializeAndDeserializePrimitives" storage="c:\users\tncbbthositg\documents\versionrepositories\github\binaryserializer\binaryserializertest\bin\debug\binaryserializertest.dll" id="c8506e53-8a61-d0f9-25cb-0fac575e5f7f">
+      <Execution id="f84b54c4-2f95-46eb-aa7e-8d08074a33da" />
+      <TestMethod codeBase="C:/Users/tncbbthositg/Documents/VersionRepositories/GitHub/BinarySerializer/BinarySerializerTest/bin/Debug/BinarySerializerTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BinarySerializerTest.SerializerTests, BinarySerializerTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanSerializeAndDeserializePrimitives" />
+    </UnitTest>
+    <UnitTest name="CanSerializeAndDeserializeCollections" storage="c:\users\tncbbthositg\documents\versionrepositories\github\binaryserializer\binaryserializertest\bin\debug\binaryserializertest.dll" id="873a97b4-1643-d25c-83ff-3ad36f71187a">
+      <Execution id="7495729e-fcda-4892-989c-1c603de49470" />
+      <TestMethod codeBase="C:/Users/tncbbthositg/Documents/VersionRepositories/GitHub/BinarySerializer/BinarySerializerTest/bin/Debug/BinarySerializerTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BinarySerializerTest.SerializerTests, BinarySerializerTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanSerializeAndDeserializeCollections" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="c8506e53-8a61-d0f9-25cb-0fac575e5f7f" executionId="f84b54c4-2f95-46eb-aa7e-8d08074a33da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="873a97b4-1643-d25c-83ff-3ad36f71187a" executionId="7495729e-fcda-4892-989c-1c603de49470" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f84b54c4-2f95-46eb-aa7e-8d08074a33da" testId="c8506e53-8a61-d0f9-25cb-0fac575e5f7f" testName="CanSerializeAndDeserializePrimitives" computerName="PATRICKSDESKPRO" duration="00:00:00.0339513" startTime="2012-09-14T13:57:12.7630259-04:00" endTime="2012-09-14T13:57:13.3610367-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f84b54c4-2f95-46eb-aa7e-8d08074a33da">
+    </UnitTestResult>
+    <UnitTestResult executionId="7495729e-fcda-4892-989c-1c603de49470" testId="873a97b4-1643-d25c-83ff-3ad36f71187a" testName="CanSerializeAndDeserializeCollections" computerName="PATRICKSDESKPRO" duration="00:00:00.0145588" startTime="2012-09-14T13:57:13.3650369-04:00" endTime="2012-09-14T13:57:13.3890383-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7495729e-fcda-4892-989c-1c603de49470">
+    </UnitTestResult>
+  </Results>
+</TestRun>

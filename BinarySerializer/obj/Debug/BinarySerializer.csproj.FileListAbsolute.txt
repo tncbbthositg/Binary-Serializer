@@ -3,3 +3,8 @@ c:\users\tncbbthositg\documents\visual studio 2010\Projects\BinarySerializer\Bin
 c:\users\tncbbthositg\documents\visual studio 2010\Projects\BinarySerializer\BinarySerializer\obj\Debug\ResolveAssemblyReference.cache
 c:\users\tncbbthositg\documents\visual studio 2010\Projects\BinarySerializer\BinarySerializer\obj\Debug\com.AutopilotLlc.BinarySerializer.dll
 c:\users\tncbbthositg\documents\visual studio 2010\Projects\BinarySerializer\BinarySerializer\obj\Debug\com.AutopilotLlc.BinarySerializer.pdb
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializer\bin\Debug\com.AutopilotLlc.BinarySerializer.dll
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializer\bin\Debug\com.AutopilotLlc.BinarySerializer.pdb
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializer\obj\Debug\com.AutopilotLlc.BinarySerializer.dll
+C:\Users\tncbbthositg\Documents\VersionRepositories\GitHub\BinarySerializer\BinarySerializer\obj\Debug\com.AutopilotLlc.BinarySerializer.pdb
