@@ -55,18 +55,18 @@ namespace BinarySerializerTest
         public void CanSerializeAndDeserializeTypedCollections()
         {
             var list = new List<int> { 2172012, 4061979, 4191981 };
-            var listResult = SerializeDeserialize(list) as List<int>;
+            var listResult = SerializeDeserialize<int>(list);
 
             for (var i = 0; i < list.Count; i++)
                 Assert.AreEqual(list[i], listResult[i]);
 
-            var dictionary = new Dictionary<object, object>
+            var dictionary = new Dictionary<string, DateTime>
             {
                 {"Lauren Caldwell", new DateTime(1979, 4, 6)},
                 {"Piper Emmaline", new DateTime(2012, 2, 17)},
                 {"Patrick Caldwell", new DateTime(1981, 4, 19)}
             };
-            var dictionaryResult = SerializeDeserializeObject(dictionary) as Dictionary<object, object>;
+            var dictionaryResult = SerializeDeserialize<string, DateTime>(dictionary);
 
             foreach (var pair in dictionary)
             {
@@ -89,6 +89,26 @@ namespace BinarySerializerTest
                 new BinarySerializationWriter(stream).WriteObject(item);
                 stream.Position = 0;
                 return new BinarySerializationReader(stream).ReadObject<T>();
+            }
+        }
+
+        private List<T> SerializeDeserialize<T>(List<T> items)
+        {
+            using (var stream = new MemoryStream())
+            {
+                new BinarySerializationWriter(stream).WriteObject(items);
+                stream.Position = 0;
+                return new BinarySerializationReader(stream).ReadList<T>();
+            }
+        }
+
+        private Dictionary<TKey, TValue> SerializeDeserialize<TKey, TValue>(Dictionary<TKey, TValue> items)
+        {
+            using (var stream = new MemoryStream())
+            {
+                new BinarySerializationWriter(stream).WriteObject(items);
+                stream.Position = 0;
+                return new BinarySerializationReader(stream).ReadDictionary<TKey, TValue>();
             }
         }
     }
