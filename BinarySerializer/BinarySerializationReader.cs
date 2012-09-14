@@ -17,11 +17,21 @@ namespace com.AutopilotLlc.BinarySerializer
             return (BinarySerializationType)ReadByte();
         }
 
+        private bool IsTypeNullable<T>()
+        {
+            var type = typeof(T);
+            if (!type.IsValueType) return true;
+            if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
+                return true;
+
+            return false;
+        }
+
         public T ReadObject<T>()
         {
             var item = ReadObject();
 
-            if (typeof(T).IsValueType && item == null)
+            if (!IsTypeNullable<T>() && item == null)
                 throw new InvalidOperationException("Datum at current location is null and cannot be assigned to value type.");
 
             return (T)item;

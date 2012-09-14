@@ -99,6 +99,16 @@ namespace BinarySerializerTest
             }
         }
 
+        [TestMethod]
+        public void CanSerializeNullableTypes()
+        {
+            Assert.AreEqual((int?)217, SerializeDeserialize<int?>(217));
+            Assert.AreEqual((int?)null, SerializeDeserialize<int?>((int?)null));
+
+            Assert.AreEqual(SerializedLength(217), SerializedLength((int?)217));
+            Assert.AreEqual(SerializedLength(null), SerializedLength((int?)null));
+        }
+
         private object SerializeDeserializeObject(object o)
         {
             return SerializeDeserialize<object>(o);
@@ -131,6 +141,15 @@ namespace BinarySerializerTest
                 new BinarySerializationWriter(stream).WriteObject(items);
                 stream.Position = 0;
                 return new BinarySerializationReader(stream).ReadDictionary<TKey, TValue>();
+            }
+        }
+
+        private long SerializedLength(object item)
+        {
+            using (var stream = new MemoryStream())
+            {
+                new BinarySerializationWriter(stream).WriteObject(item);
+                return stream.Length;
             }
         }
     }
