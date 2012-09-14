@@ -43,13 +43,52 @@ namespace BinarySerializerTest
             Assert.AreEqual(dictionary.Count, dictionaryResult.Count);
         }
 
+        [TestMethod]
+        public void CanSerializeAndDeserializeTypedPrimitives()
+        {
+            Assert.AreEqual(2172012, SerializeDeserialize<int>(2172012));
+            Assert.AreEqual(406.1978, SerializeDeserialize<double>(406.1978));
+            Assert.AreEqual("Lauren Caldwell", SerializeDeserialize<string>("Lauren Caldwell"));
+        }
+
+        [TestMethod]
+        public void CanSerializeAndDeserializeTypedCollections()
+        {
+            var list = new List<int> { 2172012, 4061979, 4191981 };
+            var listResult = SerializeDeserialize(list) as List<int>;
+
+            for (var i = 0; i < list.Count; i++)
+                Assert.AreEqual(list[i], listResult[i]);
+
+            var dictionary = new Dictionary<object, object>
+            {
+                {"Lauren Caldwell", new DateTime(1979, 4, 6)},
+                {"Piper Emmaline", new DateTime(2012, 2, 17)},
+                {"Patrick Caldwell", new DateTime(1981, 4, 19)}
+            };
+            var dictionaryResult = SerializeDeserializeObject(dictionary) as Dictionary<object, object>;
+
+            foreach (var pair in dictionary)
+            {
+                Assert.IsTrue(dictionaryResult.ContainsKey(pair.Key));
+                Assert.AreEqual(pair.Value, dictionaryResult[pair.Key]);
+            }
+
+            Assert.AreEqual(dictionary.Count, dictionaryResult.Count);
+        }
+
         private object SerializeDeserializeObject(object o)
+        {
+            return SerializeDeserialize<object>(o);
+        }
+
+        private T SerializeDeserialize<T>(T item)
         {
             using (var stream = new MemoryStream())
             {
-                new BinarySerializationWriter(stream).WriteObject(o);
+                new BinarySerializationWriter(stream).WriteObject(item);
                 stream.Position = 0;
-                return new BinarySerializationReader(stream).ReadObject();
+                return new BinarySerializationReader(stream).ReadObject<T>();
             }
         }
     }
